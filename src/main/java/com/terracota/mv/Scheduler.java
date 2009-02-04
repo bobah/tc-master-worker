@@ -13,10 +13,9 @@ import java.util.concurrent.Callable;
 public class Scheduler {
     public static void main(String[] args) {
         ExecutorService executor = new DistributedExecutorService("myTopologyName");
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 3; i++) {
             Callable<String> myTask = new Task(i);
             executor.submit(myTask);
         }
-        
     }
 }

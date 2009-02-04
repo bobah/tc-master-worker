@@ -26,6 +26,7 @@ public class Task implements Callable<String> {
 
     public String call() throws Exception {
         System.out.println(taskId);
+        Thread.sleep(40000);
         return "Task number: " + taskId;
     }
 }
